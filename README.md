@@ -51,3 +51,18 @@ Qu'affiche le programme suivant ?
             System.out.println(b.f(d));
         }
     }
+
+## Exercice 4
+Cette partie a pour but la définition d’un ensemble de classes Java avec une hiérarchie d’héritage. Ces classes doivent permettre de simuler de manière très générale l’organisation d’un système planétaire avec ses corps célestes, notamment ceux appartenant au système solaire.
+La hiérarchie des classes est la suivante : 
+ 	
+    class CorpsCeleste
+        class CorpsRevolution
+            class Planete
+            class Satellite
+        class Etoile
+    class SystemePlanetaire
+
+La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsRevolution et Etoile sont des sous-classes de CorpsCeleste. Planete et Satellite sont des sous-classes de CorpsRevolution et enfin la classe SystemePlanétaire permet de gérer l’ensemble des corps Celeste qui la composent.
+
+*Définition :*  un système planétaire (parfois confondu avec système stellaire) est un système composé de planètes, ainsi que de divers corps célestes inertes tels des astéroïdes et comètes, gravitant autour d'une étoile.
