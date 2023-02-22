@@ -65,4 +65,4 @@ La hiérarchie des classes est la suivante :
 
 La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsRevolution et Etoile sont des sous-classes de CorpsCeleste. Planete et Satellite sont des sous-classes de CorpsRevolution et enfin la classe SystemePlanétaire permet de gérer l’ensemble des corps Celeste qui la composent.
 
-*Définition :*  un système planétaire (parfois confondu avec système stellaire) est un système composé de planètes, ainsi que de divers corps célestes inertes tels des astéroïdes et comètes, gravitant autour d'une étoile.
+**Définition :**  un système planétaire (parfois confondu avec système stellaire) est un système composé de planètes, ainsi que de divers corps célestes inertes tels des astéroïdes et comètes, gravitant autour d'une étoile.
