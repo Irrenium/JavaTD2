@@ -1,29 +1,30 @@
 # Série 2
 
-
 ## Exercice 1
-Soit une interface Java I, et deux classes C1 et C2 qui l'implémentent. Les quelles des  déclarations suivantes sont justes ou fausses ? Pourquoi ?
+
+Soit une interface Java I, et deux classes C1 et C2 qui l'implémentent. Les quelles des déclarations suivantes sont justes ou fausses ? Pourquoi ?
 
     1.	I  x = new I ( ) ;
-    2.	C1 y = new C1( ) ; 
+    2.	C1 y = new C1( ) ;
     3.	I[ ] z = {new C1( ), new C2( )} ;
-    4.	C1 w = new C2( ) ; 
+    4.	C1 w = new C2( ) ;
 
 ## Exercice 2
+
 On veut gérer les guichets d'une banque. Les guichets sont numérotés de 0 à N -1.
-Quand un client arrive, on doit lui indiquer quel guichet est libre. On représente les guichets par un tableau de booléens qui indique que le guichet  i est libre (true) ou non (false).
+Quand un client arrive, on doit lui indiquer quel guichet est libre. On représente les guichets par un tableau de booléens qui indique que le guichet i est libre (true) ou non (false).
 
-1 -	Définir une classe GuichetsBanque qui a un champ tabGuichets et un constructeur qui prend comme paramètre un nombre de guichets N et initialise tabGuichets avec une taille N et true partout.
+1 - Définir une classe GuichetsBanque qui a un champ tabGuichets et un constructeur qui prend comme paramètre un nombre de guichets N et initialise tabGuichets avec une taille N et true partout.
 
-2 -	Rajouter une méthode guichetLibre qui renvoie le numéro du premier guichet libre. Si aucun guichet n'est libre, la fonction affiche un message d‘erreur et renvoie -1.
+2 - Rajouter une méthode guichetLibre qui renvoie le numéro du premier guichet libre. Si aucun guichet n'est libre, la fonction affiche un message d‘erreur et renvoie -1.
 
-3 - Rajouter Une fonction qui permet de modifier l’état d’un guichet : 
-    
+3 - Rajouter Une fonction qui permet de modifier l’état d’un guichet :
+
     void  modifEtat(int num).
 
-4-	Rajouter une fonction qui permet de déterminer le nombre total de guichets libres :
-    
-    int nbGuichetLibre( ) ; 
+4- Rajouter une fonction qui permet de déterminer le nombre total de guichets libres :
+
+    int nbGuichetLibre( ) ;
 
 ## Exercice 3
 
@@ -59,9 +60,10 @@ Qu'affiche le programme suivant ?
     }
 
 ## Exercice 4
+
 Cette partie a pour but la définition d’un ensemble de classes Java avec une hiérarchie d’héritage. Ces classes doivent permettre de simuler de manière très générale l’organisation d’un système planétaire avec ses corps célestes, notamment ceux appartenant au système solaire.
-La hiérarchie des classes est la suivante : 
- 	
+La hiérarchie des classes est la suivante :
+
     class CorpsCeleste
         class CorpsRevolution
             class Planete
@@ -71,4 +73,4 @@ La hiérarchie des classes est la suivante :
 
 La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsRevolution et Etoile sont des sous-classes de CorpsCeleste. Planete et Satellite sont des sous-classes de CorpsRevolution et enfin la classe SystemePlanétaire permet de gérer l’ensemble des corps Celeste qui la composent.
 
-**Définition :**  un système planétaire (parfois confondu avec système stellaire) est un système composé de planètes, ainsi que de divers corps célestes inertes tels des astéroïdes et comètes, gravitant autour d'une étoile.
+**Définition :** un système planétaire (parfois confondu avec système stellaire) est un système composé de planètes, ainsi que de divers corps célestes inertes tels des astéroïdes et comètes, gravitant autour d'une étoile.
