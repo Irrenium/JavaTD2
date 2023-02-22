@@ -16,8 +16,12 @@ Quand un client arrive, on doit lui indiquer quel guichet est libre. On représe
 1-	Définir une classe GuichetsBanque qui a un champ tabGuichets et un constructeur qui prend comme paramètre un nombre de guichets N et initialise tabGuichets avec une taille N et true partout.
 2-	Rajouter une méthode guichetLibre qui renvoie le numéro du premier guichet libre. Si aucun guichet n'est libre, la fonction affiche un message d‘erreur et renvoie -1.
 3-	Rajouter Une fonction qui permet de modifier l’état d’un guichet : 
-void  modifEtat(int num).
-4-	Rajouter une fonction qui permet de déterminer le nombre total de guichets libres :                               int nbGuichetLibre( ) ; 
+    
+    void  modifEtat(int num).
+
+4-	Rajouter une fonction qui permet de déterminer le nombre total de guichets libres :
+    
+    int nbGuichetLibre( ) ; 
 
 ## Exercice 3
 
