@@ -162,6 +162,8 @@ La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsR
 
     L’ensemble des champs et méthodes sont à définir sachant que l’ensemble des corps céleste qui appartiennent à la classe courante de type SystemePlanetaire sont ordonnés et sans doublant. Cette classe permet de faire un trie, de l’ensemble des corps célestes du système planétaire courant, soit en fonction de la masse soit en fonction du rayon. Aussi, elle permet d’extraire une liste de l’ensemble des corps célestes en fonction, soit d’une masse donnée, soit d’une valeur d’énergie K et d’une distance données et qui permettent de donner les étoiles dont leur énergie émise à la distance fixée est supérieur à K. D’autre part, cette classe propose la possibilité de faire la réunion des ensembles des corps célestes qui appartiennent à différents système planétaire et autres fonctions qui sont à ajouter.
 
+**Class SystemePlanetaire**
+
 | String nom                                                                            | Nom du système planétaire courant                                                                                                                                                              |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TreeSet<CorpsCeleste> ensembleCorpsCelesteOrdonne                                     | Donne la liste de l’ensemble des corps célestes se trouvant le système planétaire courant                                                                                                      |
@@ -172,3 +174,13 @@ La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsR
 | ArrayList<Etoile> listeEtoileParContrainteEnergie(double energieMin, double distance) | Méthode permettant de retourner la liste des étoiles dont l'énergie, à une distance donnée comme paramètre, est supérieure à une valeur minimale d’énergie donnée comme paramètre à la méthode |
 | SystemePlanetaire reunionDeSystemesPlanetaires(SystemePlanetaire autreSystem)         | Méthode permettant de faire la réunion ordonnée entre le système planétaire courant et le paramètre autreSystem.                                                                               |
 | ArrayList<CorpsCeleste> extraitListeCorpsCelesteParNom(String contientCeNom)          | Méthode permettant de lister l'ensemble des corps célestes dont le nom contient le mot contientCeNom.                                                                                          |
+| Les accesseurs                                                                        |                                                                                                                                                                                                |
+
+## Exercice 5
+
+Un éleveur de volaille reçoit d’un fournisseur de jeunes canards et de jeunes poulets qu’il élève jusqu’à ce qu’ils aient la taille nécessaire à leur commercialisation.
+Une volaille est caractérisée par son poids et un numéro d’identification reporté sur une bague qu’elle porte a sa petite patte. Les volailles arrivent à l’élevage à l’âge de trois semaines. Elles sont baguées et enregistrées dans le système informatique.
+Il y a deux sortes de volailles : des canards et des poulets. Le prix du canard et celui du poulet sont deux prix différents, exprimés en euros par kilo. En revanche, le prix est le même pour tous les individus de la même espèce. Ce prix varie chaque jour. Le poids auquel on abat les bêtes est différents pour les canards et les poulets, mais c’est le même pour tous les poulets (respectivement, tous les canards).
+Écrivez une classe des volailles avec deux sous-classes des poulets et des canards. Il faut pouvoir enregistrer les prix du jour, les poids d’abatage, le poids d’une volaille donnée.
+Écrivez une classe permettant de représenter l’ensemble des animaux de l’élevage au moyen d’un tableau.
+Des méthodes doivent permettre de trier les animaux à abattre et d’évaluer le prix obtenu pour ces animaux. Il faut également pouvoir enregistrer les jeunes animaux qui arrivent.
