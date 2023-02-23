@@ -78,9 +78,9 @@ La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsR
 1.  La classe CorpsCeleste
     Déclarer la classe CorpsCeleste avec les attributs suivants :
 
-- **nom :** une chaîne de caractères représentant le nom du corps céleste.
-- **rayon :** le rayon du corps céleste en kilomètres.
-- **masse :** la masse du corps céleste en tonnes.
+    - **nom :** une chaîne de caractères représentant le nom du corps céleste.
+    - **rayon :** le rayon du corps céleste en kilomètres.
+    - **masse :** la masse du corps céleste en tonnes.
 
 On inclura le constructeur et les méthodes suivantes :
 
