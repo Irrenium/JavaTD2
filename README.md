@@ -159,4 +159,5 @@ La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsR
             autour du corps céleste : Terre, qui est un corps de type Planète
 
 5.  **La classe SystemePlanetaire**
+
     L’ensemble des champs et méthodes sont à définir sachant que l’ensemble des corps céleste qui appartiennent à la classe courante de type SystemePlanetaire sont ordonnés et sans doublant. Cette classe permet de faire un trie, de l’ensemble des corps célestes du système planétaire courant, soit en fonction de la masse soit en fonction du rayon. Aussi, elle permet d’extraire une liste de l’ensemble des corps célestes en fonction, soit d’une masse donnée, soit d’une valeur d’énergie K et d’une distance données et qui permettent de donner les étoiles dont leur énergie émise à la distance fixée est supérieur à K. D’autre part, cette classe propose la possibilité de faire la réunion des ensembles des corps célestes qui appartiennent à différents système planétaire et autres fonctions qui sont à ajouter.
