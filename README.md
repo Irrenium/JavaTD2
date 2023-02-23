@@ -78,17 +78,17 @@ La classe CorpsCeleste se trouve au sommet de la hiérarchie. Les classes CorpsR
 1.  La classe CorpsCeleste
     Déclarer la classe CorpsCeleste avec les attributs suivants :
 
-        -	nom : une chaîne de caractères représentant le nom du corps céleste.
-        -	rayon : le rayon du corps céleste en kilomètres.
-        -	masse : la masse du corps céleste en tonnes.
+- **nom :** une chaîne de caractères représentant le nom du corps céleste.
+- **rayon :** le rayon du corps céleste en kilomètres.
+- **masse :** la masse du corps céleste en tonnes.
 
 On inclura le constructeur et les méthodes suivantes :
 
-- Constructeur de la classe: reçoit en paramètre des valeurs permettant d’initialiser les attributs nom, rayon et masse.
-- Méthode densite : Cette méthode calcule la densité d’un corps céleste à partir du calcul de son volume et de sa masse.
+- **Constructeur de la classe :** reçoit en paramètre des valeurs permettant d’initialiser les attributs nom, rayon et masse.
+- **Méthode densite :** Cette méthode calcule la densité d’un corps céleste à partir du calcul de son volume et de sa masse.
 - Les accesseurs sont aussi à définir.
 
-Rappels :
+_Rappels :_
 
     densite = masse / volume ; La densité est en Kg/m3
     volume = 4/3 _ Pi _ rayon3
