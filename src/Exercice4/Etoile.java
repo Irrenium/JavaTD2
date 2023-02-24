@@ -1,50 +1,56 @@
-package exercie4;
+package Exercice4;
+
 public class Etoile extends CorpsCeleste {
-    public final double K=1.414213;
+    public final double K = 1.414213;
     private float temperature;
-    //getters
+
+    // getters
     /**
      * get la temperature
+     * 
      * @return temperature
      */
-    public float getTmp(){
+    public float getTmp() {
         return temperature;
     }
-    //setters
+
+    // setters
     /**
      * set la temperature
+     * 
      * @param Nvtmp
      */
-    public void setTmp( float Nvtmp){
-        temperature=Nvtmp;
+    public void setTmp(float Nvtmp) {
+        temperature = Nvtmp;
     }
-    //constructeur
+
+    // constructeur
     /**
      * 
      * @param nom
      * @param rayon
      * @param masse
-     * @param temperature 
+     * @param temperature
      */
-    public Etoile(String nom, float rayon, float masse,float temperature) {
+    public Etoile(String nom, float rayon, float masse, float temperature) {
         super(nom, rayon, masse);
         setTmp(temperature);
     }
-    //methode energie recue
+
+    // methode energie recue
     /**
      * 
      * @param distance
-     * @return l'energie = energie = K *temperature /  (distance)2
+     * @return l'energie = energie = K *temperature / (distance)2
      */
-    public double energieRecue(double distance){
-        return K*temperature/Math.pow(distance, 2);
+    public double energieRecue(double distance) {
+        return K * temperature / Math.pow(distance, 2);
     }
-    //redefinition de la methode toString
-    @Override 
-    public String toString(){
-        return super.toString()+"la temperature est "+temperature;    
+
+    // redefinition de la methode toString
+    @Override
+    public String toString() {
+        return super.toString() + "la temperature est " + temperature;
     }
-    
-    
-    
+
 }
