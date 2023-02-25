@@ -1,5 +1,13 @@
 public class Exercice3 {
     // A et A
+    // A et A
+    // A et D
+    // B et A
+    // B et A
+    // A et D
+    // B et B
+    // B et B
+    // A et D
 
     // a1.f(b)
     // A la compilation, la signature est déterminée dans A puisque a1 est de type
@@ -20,38 +28,43 @@ public class Exercice3 {
     // appelle f(D d) de A. Donc on aura l’affichage "A et D"
 
     // a2.f(b)
-    //  A la compilation, la signature est déterminée dans A puisque a2 est de type
+    // A la compilation, la signature est déterminée dans A puisque a2 est de type
     // statique A : cette signature ou profil existant dans A est void f(A b).
-    //  A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
+    // A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
     // trouve une méthode de profil void f(A b). Oui. C’est donc ” f(A b) de B”’ qui
     // sera affichée, on aura alors l’affichage "B et A"
+
     // a2.f(c)
-    //  A la compilation, la signature est déterminée dans A puisque a2 est de type
+    // A la compilation, la signature est déterminée dans A puisque a2 est de type
     // statique A : cette signature ou profil existant dans A est void f(A c).
-    //  A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
+    // A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
     // trouve une méthode de profil void f(A c). Oui. C’est donc ” f(A c) de B”’ qui
     // sera affichée, on aura alors l’affichage "B et A"
+
     // a2.f(d)
-    //  A la compilation, la signature est déterminée dans A puisque a2 est de type
+    // A la compilation, la signature est déterminée dans A puisque a2 est de type
     // statique A : cette signature ou profil existant dans A est void f(D d).
-    //  A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
+    // A l’exécution, vu que a2 est de type dynamique B, on regarde dans B si on
     // trouve une méthode de profil void f(D d). non. C’est donc ” f(D d) de A”’ qui
     // sera affichée, on aura alors l’affichage "A et D"
+
     // b.f(b)
-    //  A la compilation, la signature est déterminée dans B puisque b est de type
+    // A la compilation, la signature est déterminée dans B puisque b est de type
     // statique B : cette signature ou profil existant dans B est void f(B b).
-    //  A l’exécution, vu que b est de même type dynamique que statique, on appelle
+    // A l’exécution, vu que b est de même type dynamique que statique, on appelle
     // f(B b) de B. Donc on aura l’affichage "B et B".
+
     // b.f(c)
-    //  A la compilation, la signature est déterminée dans B puisque b est de type
+    // A la compilation, la signature est déterminée dans B puisque b est de type
     // statique B : cette signature ou profil existant dans B est void f(B c)
     // sachant que C extends B.
-    //  A l’exécution, vu que b est de même type dynamique que statique, on appelle
+    // A l’exécution, vu que b est de même type dynamique que statique, on appelle
     // f(B c) de B. Donc on aura l’affichage "B et B".
+
     // b.f(d)
-    //  A la compilation, la signature est déterminée dans B puisque b est de type
+    // A la compilation, la signature est déterminée dans B puisque b est de type
     // statique B : cette signature ou profil existant dans B est void f(D d).
-    //  A l’exécution, vu que b est de même type dynamique que statique, on appelle
+    // A l’exécution, vu que b est de même type dynamique que statique, on appelle
     // f(D d) de A. Donc on aura l’affichage "A et D".
 
     // Autres explications
