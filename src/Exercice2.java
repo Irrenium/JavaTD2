@@ -3,15 +3,16 @@ public class Exercice2 {
     private boolean[] tabGuichets;
 
     /**
-         *Constructeur de la classe GuichetsBanque
-         * @param n int
-         */
-        public GuichetsBanque(int n) {
-            tabGuichets = new boolean[n];
-            for (int i = 0; i < n; i++) {
-                tabGuichets[i] = true;
-            }
+     * Constructeur de la classe GuichetsBanque
+     * 
+     * @param n int
+     */
+    public void GuichetsBanque(int n) {
+        tabGuichets = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            tabGuichets[i] = true;
         }
+    }
 
     /**
      * Méthode qui renvoie le numéro du premier guichet libre.
