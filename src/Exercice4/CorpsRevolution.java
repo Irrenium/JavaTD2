@@ -1,57 +1,79 @@
-package Exercice4;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projetjavatd2_2022_2023.Exo_4;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author PC
+ */
 public class CorpsRevolution extends CorpsCeleste {
-    private double rayon_orbital;
-    private CorpsCeleste centre_revolution;
+
+    private double rayonOrbitale;
+    private CorpsCeleste centreRevolution;
+
+    public CorpsRevolution(String nom, double rayon, double masse, double rayonOrbitale,
+            CorpsCeleste centreRevolution) {
+        super(nom, rayon, masse);
+        setRayonOrbitale(rayonOrbitale);
+        this.centreRevolution = centreRevolution;
+    }
 
     /**
-     * constructeur
-     * 
-     * @param nom
-     * @param rayon
-     * @param masse
-     * @param rayon_orbital
-     * @param centre_revolution
+     * Fonction permettant de modifier le rayon du corps celeste courant, en
+     * gérant les problèmes si le paramètre newRayon est négatif ou nul
+     *
+     * @param newRayon double
      */
-    public CorpsRevolution(String nom, float rayon, float masse, double rayon_orbital, CorpsCeleste centre_revolution) {
-        super(nom, rayon, masse);
-        setRayonOrbital(rayon_orbital);
-        // setCentreRevolution(centre_revolution);
-    }
-    // getters
-
-    // setters
-    public void setRayonOrbital(double NvRayonOrbital) {
-        while (NvRayonOrbital < 0) {
-            System.out.println("rayon inacceprab le");
-            Scanner sc = new Scanner(System.in);
-            NvRayonOrbital = sc.nextFloat();
-            sc.close();
+    public void setRayonOrbitale(double newRayonOrbitale) {
+        Scanner sc = new Scanner(System.in);
+        while (newRayonOrbitale < 0) {
+            System.out.println(
+                    "le rayon orbitale du corps de révolution est "
+                    + "strictement négatif");
+            System.out.println(
+                    "Donnez un nouveau rayon orbitale du corps de révolution "
+                    + "qui doit etre positif");
+            newRayonOrbitale = sc.nextDouble();
         }
-        rayon_orbital = NvRayonOrbital;
+        rayonOrbitale = newRayonOrbitale;
+        sc.close();
     }
 
-    public void setCentreRevolution(CorpsCeleste NvCentreRevolution) {
-        if (!(NvCentreRevolution instanceof CorpsCeleste)) {
-            System.out.println("votre objet doit etre de type CorpsCeleste");
-        }
-        if (NvCentreRevolution == null) {
-            NvCentreRevolution = new CorpsCeleste("", 0, 0);
-        }
-        centre_revolution = NvCentreRevolution;
+    /**
+     * Fonct permettant de retourner le rayon orbitale d'un corps de revolution
+     *
+     * @return double
+     */
+    public double getRayonOrbital() {
+        return rayonOrbitale;
     }
 
-    public String autourDe() {
-        return centre_revolution.getNom();
+    /**
+     * méthode retourne en résultat le corps celeste autour duquel ce
+     * corpsRevolution courant tourne.
+     *
+     * @return
+     */
+    public CorpsCeleste autourDe() {
+        return centreRevolution;
     }
 
-    // la methode toString
+    /**
+     * Fonction permettant d'afficher les caractéristiques d'un corps de
+     * révolution
+     *
+     * @return String
+     */
     @Override
     public String toString() {
-        return "Corps de type CorpsRevolustion" + "\n" + "tourne autour de " + autourDe() + "de rayon orbital"
-                + rayon_orbital + super.toString();
+        String s = super.toString();
+        s += ("\n \t effectue des révolutions à une distance de :" + rayonOrbitale + " millions de kilomètres \n");
+        s += ("\t autour du corps céleste : " + centreRevolution.getNom()
+                + ", qui est un corps de type " + centreRevolution.getClass().getSimpleName() + "\n");
+        return s;
     }
-
 }

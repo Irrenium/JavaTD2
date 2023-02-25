@@ -1,79 +1,151 @@
-package Exercice4;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projetjavatd2_2022_2023.Exo_4;
 
 import java.util.Scanner;
 
-public class CorpsCeleste {
+/**
+ *
+ * @author PC
+ */
+public class CorpsCeleste{
+
     private String nom;
-    private float rayon;
-    private float masse;
+    private double rayon;
+    private double masse;
 
-    // constructeur
-    /**
-     * 
-     * @param nom
-     * @param rayon
-     * @param masse
-     */
-
-    public CorpsCeleste(String nom, float rayon, float masse) {
+    public CorpsCeleste(String nom, double rayon, double masse) {
         setNom(nom);
         setRayon(rayon);
         setMasse(masse);
     }
 
-    // methode qui calcule la densite
-    public float densite() {
-        return (float) ((4 * Math.PI * Math.pow(rayon, 3)) / 3);
+    /**
+     * Fonction permettant de modifier le nom du corps celeste courant, en
+     * gérant les problèmes si le paramètre newNom est nul ou s'il est une
+     * chaine de charactères vide
+     *
+     * @param newNom String
+     */
+    public void setNom(String newNom) {
+        while ((newNom == null) || (newNom.trim().equals(""))) {
+                System.out.println(
+                        "le nom du corps celeste est null ou vide");
+                System.out.println(
+                        "Donnez un nouveau nom du corps celeste non vide");
+                Scanner sc = new Scanner(System.in);
+                newNom = sc.nextLine();
+        }
+        nom = newNom;
     }
 
-    // getters
+    /**
+     * Fonction permettant de modifier le rayon du corps celeste courant, en
+     * gérant les problèmes si le paramètre newRayon est négatif ou nul
+     *
+     * @param newRayon double
+     */
+    public void setRayon(double newRayon) {
+        Scanner sc = new Scanner(System.in);
+        while (newRayon <= 0) {
+            System.out.println(
+                    "le rayon du corps celeste est invalide");
+            System.out.println(
+                    "Donnez un nouveau rayon du corps celeste qui doit etre strictement positif");
+            newRayon = sc.nextDouble();
+        }
+        rayon = newRayon;
+        sc.close();
+
+    }
+
+    /**
+     * Fonction permettant de modifier la valeur de la masse du corps celeste
+     * courant, en gérant les problèmes si le paramètre newMasse est négatif ou nul
+     *
+     * @param newMasse double
+     */
+    public void setMasse(double newMasse) {
+        
+        while (newMasse <= 0) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("la masse du corps celeste est invalide");
+            System.out.println("Donnez un nouvelle valeur de la masse du corps celeste "
+                    + "qui doit etre strictement positif");
+            newMasse = sc.nextDouble();
+            sc.close();
+        }
+        masse = newMasse;  
+    }
+
+    /**
+     * Fonction permettant de donner la valeur de la densité, en Kg/m^3, d'un
+     * corps celeste
+     *
+     * @return double
+     */
+    public double densite() {
+        return (3 * masse / (4 * Math.PI * Math.pow(rayon, 3) * Math.pow(10, 6)));
+    }
+
+    /**
+     * Fonction retournant le nom du corps celeste courant
+     *
+     * @return String
+     */
     public String getNom() {
         return nom;
     }
 
-    public float getRayon() {
-        return rayon;
-    }
-
-    public float getMasse() {
+    /**
+     * Fonction retournant la masse du corps celeste courant
+     *
+     * @return double
+     */
+    public double getMasse() {
         return masse;
     }
 
-    // setters
-    public void setNom(String NvNom) {
-        while (NvNom == null) {
-            System.out.println("le nom que vous avez saisi est null");
-            Scanner entree = new Scanner(System.in);
-            NvNom = entree.nextLine();
-            entree.close();
-        }
-        nom = NvNom;
+    /**
+     * Fonction retournant le rayon du corps celeste courant
+     *
+     * @return double
+     */
+    public double getRayon() {
+        return rayon;
     }
 
-    public void setMasse(float NvMasse) {
-        while (NvMasse < 0) {
-            System.out.println("la masse que vous avez saisi n'est pas valide");
-            Scanner entree = new Scanner(System.in);
-            NvMasse = entree.nextFloat();
-            entree.close();
+    /**
+     * Méthode permettantde de vérifier l'égalité du corps celeste courant avec
+     * le corps celeste donné comme paramètre à la fonction
+     *
+     * @param autreCorps CorpsCeleste
+     * @return boolean
+     */
+    @Override
+    public boolean equals(Object autreCorps) {
+        if (this == autreCorps) {
+            return true;
         }
-        masse = NvMasse;
+        if (autreCorps instanceof CorpsCeleste) {
+            return nom.equals(((CorpsCeleste) autreCorps).nom);
+        }
+        return false;
     }
 
-    public void setRayon(float NvRayon) {
-        while (NvRayon < 0) {
-            System.out.println("le rayon que vous avez saisi n'est pas valide");
-            Scanner entree = new Scanner(System.in);
-            NvRayon = entree.nextFloat();
-            entree.close();
-        }
-        rayon = NvRayon;
-    }
-
+    /**
+     * Fonction permettant d'afficher les caractéristiques d'un corps celeste
+     *
+     * @return String
+     */
     @Override
     public String toString() {
-        return "Nom:" + getNom() + "\n" + "Rayon:" + getRayon() + "\n" + "Masse:" + getMasse() + "\n" + "Densite"
-                + densite();
+        StringBuilder sb = new StringBuilder((getClass().getSimpleName() + "\n"));
+        sb.append(("\t de nom :" + nom + ", de rayon :" + rayon));
+        sb.append((" kilometre" + ", de masse : " + masse + " tonnes \n"));
+        sb.append(("\t de densite :" + densite() + " kg par m^3"));
+        return sb.toString();
     }
-
 }

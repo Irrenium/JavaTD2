@@ -1,22 +1,17 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Exercice4;
+package projetjavatd2_2022_2023.Exo_4;
 
 /**
  *
- * @author MAD SOMBO2023
+ * @author PC
  */
 public class Satellite extends CorpsRevolution {
-    // constructeur
-    public Satellite(String nom, float rayon, float masse, float rayon_orbital, CorpsCeleste centre_revolution) {
-        super(nom, rayon, masse, rayon_orbital, centre_revolution);
-    }
 
-    // methode toString
-    @Override
-    public String toString() {
-        return "Corps de type Satellite" + "\n" + super.toString();
+    public Satellite(String nom, double rayon, double masse, double rayonOrbitaleo , 
+            CorpsCeleste centreRevolution) {
+        super(nom, rayon, masse, rayonOrbitaleo, centreRevolution);
     }
 }

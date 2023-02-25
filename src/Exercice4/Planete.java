@@ -1,27 +1,37 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Exercice4;
+package projetjavatd2_2022_2023.Exo_4;
 
 /**
  *
- * @author MAD SOMBO2023
+ * @author PC
  */
 public class Planete extends CorpsRevolution {
-    // constructeur
-    public Planete(String nom, float rayon, float masse, float rayon_orbital, CorpsCeleste centre_revolution) {
-        super(nom, rayon, masse, rayon_orbital, centre_revolution);
+
+    /**
+     * 
+     * @param nom String
+     * @param rayon double
+     * @param masse double
+     * @param rayonOrbitale double
+     * @param centreRevolution CorpsCeleste
+     */
+    public Planete(String nom, double rayon, double masse, double rayonOrbitale, CorpsCeleste centreRevolution) {
+        super(nom, rayon, masse, rayonOrbitale, centreRevolution);
     }
 
-    // methode commeSoleil
-    public boolean commeSoleil() {
-        return getNom().equals(autourDe());
-    }
-
-    // la methode toString
-    @Override
-    public String toString() {
-        return "Corps de type Planette" + "\n" + super.toString();
+    /**
+     * Cette méthode retourne en résultat un booléen indiquant si la planete 
+     * indiquée en paramètre tourne autour de la même étoile que ce corps
+     * @param p Planete
+     * @return boolean
+     */
+    public boolean memeSoleil(Planete p) {
+        // (autourDe() == p.autourDe())// autourDe().equals(p.autourDe()) == true
+        
+        return (autourDe() instanceof Etoile) && (p.autourDe() instanceof Etoile) 
+                && (autourDe().equals(p.autourDe()) == true);
     }
 }

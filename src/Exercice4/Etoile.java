@@ -1,56 +1,81 @@
-package Exercice4;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projetjavatd2_2022_2023.Exo_4;
 
+import java.util.Scanner;
+
+/**
+ *
+ * @author PC
+ */
 public class Etoile extends CorpsCeleste {
-    public final double K = 1.414213;
-    private float temperature;
 
-    // getters
+    private double temperature;
+    public final static double K = 1.414213;
+
     /**
-     * get la temperature
-     * 
-     * @return temperature
+     * Constructeur de la classe Etoile
+     *
+     * @param nom String
+     * @param rayon double
+     * @param masse double
+     * @param temperature double
      */
-    public float getTmp() {
+    public Etoile(String nom, double rayon, double masse, double temperature) {
+        super(nom, rayon, masse);
+        this.temperature = temperature;
+    }
+
+    /**
+     * Fonction permettant de calculer, à partir de la distance à l’étoile,
+     * l’énergie qu’un corps situé à cette distance, devrait recevoir
+     *
+     * @param distance double
+     * @return double
+     */
+    public double energyRecue(double distance) {
+
+        while (distance <= 0) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("la distance à l'étoile courante est négative");
+            System.out.println(
+                    "Donnez une nouvelle distance, à l'étoile courante, qui doit etre strictement positif");
+            distance = sc.nextDouble();
+            sc.close();
+        } 
+        return ((K * temperature) / Math.pow(distance, 2));
+    }
+
+    /**
+     * Fonction permettantde retourner la temperature de l'étoile courante
+     *
+     * @return double
+     */
+    public double getTemperature() {
         return temperature;
     }
 
-    // setters
     /**
-     * set la temperature
-     * 
-     * @param Nvtmp
+     * Fonction permettant de modifier la temperature de l'étoile courante
+     *
+     * @param newTemperature double
      */
-    public void setTmp(float Nvtmp) {
-        temperature = Nvtmp;
+    public void setTemperature(double newTemperature) {
+        temperature = newTemperature;
     }
 
-    // constructeur
     /**
-     * 
-     * @param nom
-     * @param rayon
-     * @param masse
-     * @param temperature
+     * Fonction permettant de retourner les caractéristiques d'une étoile.
+     *
+     * @return String
      */
-    public Etoile(String nom, float rayon, float masse, float temperature) {
-        super(nom, rayon, masse);
-        setTmp(temperature);
-    }
-
-    // methode energie recue
-    /**
-     * 
-     * @param distance
-     * @return l'energie = energie = K *temperature / (distance)2
-     */
-    public double energieRecue(double distance) {
-        return K * temperature / Math.pow(distance, 2);
-    }
-
-    // redefinition de la methode toString
     @Override
     public String toString() {
-        return super.toString() + "la temperature est " + temperature;
+        String s = super.toString();
+        s += (", de temperature en surface : " + temperature + "°K");
+        return s;
     }
 
 }
