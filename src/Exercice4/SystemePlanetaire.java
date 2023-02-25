@@ -1,8 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package projetjavatd2_2022_2023.Exo_4;
+
+package Exercice4;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,10 +7,8 @@ import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-/**
- *
- * @author PC
- */
+
+
 public class SystemePlanetaire {
 
     private TreeSet<CorpsCeleste> ensembleCorpsCelesteOrdonne;
@@ -89,8 +84,7 @@ public class SystemePlanetaire {
         // comparator
         Comparator<CorpsCeleste> comparateur = new Comparator<CorpsCeleste>() {
             @Override
-            public int compare(CorpsCeleste corps_1, CorpsCeleste corps_2) {
-                if (corps_1.getMasse() == corps_2.getMasse()) {
+            public int compare(CorpsC if (corps_1.getMasse() == corps_2.getMasse()) {
                     return 0;
                 } else if (corps_1.getMasse() > corps_2.getMasse()) {
                     return 1;
@@ -105,8 +99,8 @@ public class SystemePlanetaire {
         Collections.sort(liste, comparateur);
         return liste;
     }
-
-    /**
+ 
+    /** 
      * Fonction retournant une liste triée par rayon de l'ensemble des corps
      * celeste appartenant au système planétaire courant
      *
@@ -132,7 +126,7 @@ public class SystemePlanetaire {
     }
 
     /**
-     * Fonction permettant de retourner l'ensemble des corps celeste dont la
+     * Fon ction permettant de retourner l'ensemble des corps celeste dont la
      * valeur de masse est inférieure au paramètre masseMax de la fonction
      *
      * @param masseMax double
@@ -174,6 +168,7 @@ public class SystemePlanetaire {
         if (extraitListe.isEmpty()) {
             return null;
         }
+                
         return extraitListe;
     }
 
@@ -209,6 +204,7 @@ public class SystemePlanetaire {
         if (extraitListe.isEmpty()) {
             return null;
         }
+                
         return extraitListe;
     }
     // avec un nom donnée
@@ -219,4 +215,7 @@ public class SystemePlanetaire {
     // faire la réunion du système courant avec un autre système
     //
     // supprimer, ajouter, chercher, modifier, toString
+    // 
 }
+
+    // 

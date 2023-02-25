@@ -1,8 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package projetjavatd2_2022_2023.Exo_4;
+
+package Exercice4;
 
 import java.util.Scanner;
 

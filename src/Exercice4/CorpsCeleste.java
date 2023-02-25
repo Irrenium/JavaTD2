@@ -1,8 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package projetjavatd2_2022_2023.Exo_4;
+
+
+package Exercice4;
 
 import java.util.Scanner;
 
@@ -10,7 +8,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class CorpsCeleste{
+public class CorpsCeleste {
 
     private String nom;
     private double rayon;
@@ -31,12 +29,12 @@ public class CorpsCeleste{
      */
     public void setNom(String newNom) {
         while ((newNom == null) || (newNom.trim().equals(""))) {
-                System.out.println(
-                        "le nom du corps celeste est null ou vide");
-                System.out.println(
-                        "Donnez un nouveau nom du corps celeste non vide");
-                Scanner sc = new Scanner(System.in);
-                newNom = sc.nextLine();
+            System.out.println(
+                    "le nom du corps celeste est null ou vide");
+            System.out.println(
+                    "Donnez un nouveau nom du corps celeste non vide");
+            Scanner sc = new Scanner(System.in);
+            newNom = sc.nextLine();
         }
         nom = newNom;
     }
@@ -68,7 +66,7 @@ public class CorpsCeleste{
      * @param newMasse double
      */
     public void setMasse(double newMasse) {
-        
+
         while (newMasse <= 0) {
             Scanner sc = new Scanner(System.in);
             System.out.println("la masse du corps celeste est invalide");
@@ -77,7 +75,7 @@ public class CorpsCeleste{
             newMasse = sc.nextDouble();
             sc.close();
         }
-        masse = newMasse;  
+        masse = newMasse;
     }
 
     /**

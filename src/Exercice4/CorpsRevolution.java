@@ -1,8 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package projetjavatd2_2022_2023.Exo_4;
+
+package Exercice4;
 
 import java.util.Scanner;
 
@@ -35,11 +32,11 @@ public class CorpsRevolution extends CorpsCeleste {
                     "le rayon orbitale du corps de révolution est "
                     + "strictement négatif");
             System.out.println(
-                    "Donnez un nouveau rayon orbitale du corps de révolution "
-                    + "qui doit etre positif");
+                    "Donnez un nouveau rayon orbitale du corps de r
+                            + "qui doit etre positif");
             newRayonOrbitale = sc.nextDouble();
         }
-        rayonOrbitale = newRayonOrbitale;
+                            e = newRayonOrbitale;
         sc.close();
     }
 
