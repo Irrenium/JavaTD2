@@ -1,4 +1,5 @@
 
+
 package Exercice4;
 
 import java.util.ArrayList;
@@ -7,8 +8,10 @@ import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-
-
+/**
+ *
+ * @author PC
+ */
 public class SystemePlanetaire {
 
     private TreeSet<CorpsCeleste> ensembleCorpsCelesteOrdonne;
@@ -81,10 +84,10 @@ public class SystemePlanetaire {
     public ArrayList<CorpsCeleste> listeTrieeParMasse() {
         ArrayList<CorpsCeleste> liste
                 = new ArrayList<>(ensembleCorpsCelesteOrdonne);
-        // comparator
-        Comparator<CorpsCeleste> comparateur = new Comparator<CorpsCeleste>() {
+        // comparator or<CorpsCeleste> comparateur = new Comparator<CorpsCeleste>() {
             @Override
-            public int compare(CorpsC if (corps_1.getMasse() == corps_2.getMasse()) {
+            public int compare(CorpsCeleste corps_1, CorpsCeleste corps_2) {
+                if (corps_1.getMasse() == corps_2.getMasse()) {
                     return 0;
                 } else if (corps_1.getMasse() > corps_2.getMasse()) {
                     return 1;
@@ -96,11 +99,11 @@ public class SystemePlanetaire {
 
         //Collections.sort(liste, Comparator.comparing(CorpsCeleste::getMasse));
         //Collections.sort(liste, Comparator.comparingDouble(CorpsCeleste::getMasse));
-        Collections.sort(liste, comparateur);
-        return liste;
+        Co llections.sort(liste, comparateur);
+        re turn liste;
     }
- 
-    /** 
+
+    /**
      * Fonction retournant une liste triée par rayon de l'ensemble des corps
      * celeste appartenant au système planétaire courant
      *
@@ -123,10 +126,10 @@ public class SystemePlanetaire {
         Collections.sort(liste, Comparator.comparing(CorpsCeleste::getRayon));
         //Collections.sort(liste, comparateur);
         return liste;
-    }
+    } 
 
     /**
-     * Fon ction permettant de retourner l'ensemble des corps celeste dont la
+     * Fonction permettant de retourner l'ensemble des corps celeste dont la
      * valeur de masse est inférieure au paramètre masseMax de la fonction
      *
      * @param masseMax double
@@ -165,10 +168,10 @@ public class SystemePlanetaire {
                     && (((Etoile) corpsCel).energyRecue(distance) >= energieMin));
             extraitListe.add((Etoile) corpsCel);
         }
+                
         if (extraitListe.isEmpty()) {
             return null;
         }
-                
         return extraitListe;
     }
 
@@ -201,21 +204,20 @@ public class SystemePlanetaire {
             if (corpsCel.getNom().contains(contientCeNom) == true);
             extraitListe.add(corpsCel);
         }
+                
         if (extraitListe.isEmpty()) {
             return null;
         }
-                
         return extraitListe;
     }
     // avec un nom donnée
     // fonction de trie par masse et autre par rayon en utilisant des comparator
     // des fonction d'extraction des coprs celeste dont la masse est < à une masse donnée
     // la meme chose pour les comps dont le nom contient une chaine donnée
-    // afficher les étoiles qui fournissent unne énergie supérieur à une énergie donnée
+    // afficher les étoiles qui fournissent unne énergie supérieur à une énergie d
+    // nnée
     // faire la réunion du système courant avec un autre système
     //
+    // 
     // supprimer, ajouter, chercher, modifier, toString
-    // 
 }
-
-    // 
